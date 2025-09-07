@@ -36,11 +36,11 @@ simple **Bootstrap frontend**.
 
 ### 🛡️ Chat Moderation
 
-![Chat Moderation UI](./screenshots/chat_moderation.png)
+![Chat Moderation UI](./screenshots/chat_moderation.PNG)
 
 ### 💰 Price Suggestor
 
-![Price Suggestor UI](./screenshots/price_suggestor.png)
+![Price Suggestor UI](./screenshots/price_suggestor.PNG)
 
 ------------------------------------------------------------------------
 
