@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marketplace Agents</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🛒 Marketplace Assistant</h1>
+
+    <!-- Price Suggestor -->
+    <div class="card">
+      <h2>💰 Price Suggestor</h2>
+      <form id="priceForm">
+        <label>Category:</label>
+        <input type="text" name="category" placeholder="Mobile, Laptop, etc" required>
+
+        <label>Brand:</label>
+        <input type="text" name="brand" placeholder="Apple, Dell, etc">
+
+        <label>Condition:</label>
+        <select name="condition">
+          <option>Like New</option>
+          <option>Good</option>
+          <option>Fair</option>
+        </select>
+
+        <label>Age (months):</label>
+        <input type="number" name="age_months" required>
+
+        <button type="submit">Get Price</button>
+      </form>
+      <pre id="priceResult"></pre>
+    </div>
+
+    <!-- Chat Moderation -->
+    <div class="card">
+      <h2>🛡️ Chat Moderation</h2>
+      <form id="chatForm">
+        <label>Message:</label>
+        <textarea name="message" placeholder="Enter chat message..." required></textarea>
+        <button type="submit">Check</button>
+      </form>
+      <pre id="chatResult"></pre>
+    </div>
+  </div>
+
+  <script>
+    // Price Suggestor
+    document.getElementById("priceForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const params = new URLSearchParams(formData).toString();
+      const res = await fetch(`/negotiate?${params}`);
+      const data = await res.json();
+      document.getElementById("priceResult").textContent = JSON.stringify(data, null, 2);
+    });
+
+    // Chat Moderation
+    document.getElementById("chatForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const params = new URLSearchParams(formData).toString();
+      const res = await fetch(`/moderate?${params}`);
+      const data = await res.json();
+      document.getElementById("chatResult").textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

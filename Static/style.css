@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #007ACC;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
