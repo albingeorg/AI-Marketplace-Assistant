@@ -145,15 +145,3 @@ Navigate to:\
 
 ------------------------------------------------------------------------
 
-## 🎯 Future Improvements
-
--   📊 Use multiple marketplace APIs (OLX, Cashify) for dynamic price
-    checks.\
--   🔎 Add spam/fraud detection in moderation.\
--   🤖 Expose via FastAPI with Swagger UI.
-
-------------------------------------------------------------------------
-
-## 👨‍💻 Author
-
-Made with ❤️ for AI Intern Project Assessment
